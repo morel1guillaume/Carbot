@@ -1,0 +1,84 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "intent": "bonjour",
+        "text": "hey"
+      },
+      {
+        "intent": "bonjour",
+        "text": "hello"
+      },
+      {
+        "intent": "bonjour",
+        "text": "hi"
+      },
+      {
+        "intent": "bonjour",
+        "text": "hello there"
+      },
+      {
+        "intent": "bonjour",
+        "text": "Bonjour"
+      },
+      {
+        "intent": "bonjour",
+        "text": "salut"
+      },
+      {
+        "intent": "commande_vehicule",
+        "text": "commander un nouveau véhicule"
+      },
+      {
+        "intent": "commande_vehicule",
+        "text": "je dois commander un nouveau véhicule que dois je faire ?"
+      },
+      {
+        "intent": "commande_vehicule",
+        "text": "je veux commander un nouveau véhicule"
+      },
+      {
+        "intent": "vf",
+        "text": "c'est pour une vf"
+      },
+      {
+        "intent": "vf",
+        "text": "un vf"
+      },
+      {
+        "intent": "vf",
+        "text": "vf"
+      },
+      {
+        "intent": "vs",
+        "text": "c'est pour un vs"
+      },
+      {
+        "intent": "vs",
+        "text": "un vs"
+      },
+      {
+        "intent": "vs",
+        "text": "vs"
+      },
+      {
+        "intent": "RH",
+        "text": "RH"
+      },
+      {
+        "intent": "RH",
+        "text": "Accord RH"
+      },
+      {
+        "intent": "pneu",
+        "text": "pneu"
+      },
+      {
+        "intent": "pneu",
+        "text": "changer pneu"
+      }
+    ],
+    "regex_features": [],
+    "entity_synonyms": []
+  }
+}

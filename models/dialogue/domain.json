@@ -1,0 +1,19 @@
+{
+  "features": [
+    "intent_bonjour",
+    "intent_commande_vehicule",
+    "intent_vs",
+    "intent_vf",
+    "intent_RH",
+    "intent_pneu",
+    "slot_is_RH_0",
+    "prev_action_listen",
+    "prev_action_restart",
+    "prev_utter_bonjour",
+    "prev_utter_commande_vehicule",
+    "prev_utter_vs",
+    "prev_utter_vf",
+    "prev_action_custom",
+    "prev_action_pneu"
+  ]
+}

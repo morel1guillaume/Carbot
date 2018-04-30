@@ -1,0 +1,50 @@
+action_factory: null
+action_names:
+- utter_bonjour
+- utter_commande_vehicule
+- utter_vs
+- utter_vf
+- action_custom
+- action_pneu
+actions:
+- utter_bonjour
+- utter_commande_vehicule
+- utter_vs
+- utter_vf
+- actions.ActionCustom
+- actions.ActionPneu
+config:
+  store_entities_as_slots: true
+entities: []
+intents:
+- bonjour
+- commande_vehicule
+- vs
+- vf
+- RH
+- pneu
+slots:
+  is_RH:
+    initial_value: null
+    type: rasa_core.slots.BooleanSlot
+templates:
+  utter_bonjour:
+  - text: Bonjour ! Bienvenue sur carbot. Posez moi votre question ?
+  utter_commande_vehicule:
+  - buttons:
+    - payload: VF
+      title: VF
+    - payload: VS
+      title: VS
+    text: S'agit-il d'un VF ou d'un VS ?
+  utter_default:
+  - text: cela marche
+  utter_pneu_1:
+  - text: pneu 1
+  utter_pneu_2:
+  - text: pneu 2
+  utter_vf:
+  - text: info vf
+  utter_vs:
+  - text: info vs
+topics: []

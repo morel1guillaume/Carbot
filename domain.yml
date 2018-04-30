@@ -1,0 +1,49 @@
+intents:
+  - bonjour
+  - commande_vehicule
+  - vs
+  - vf
+  - RH
+  - pneu
+
+actions:
+  - utter_bonjour
+  - utter_commande_vehicule
+  - utter_vs
+  - utter_vf
+  - actions.ActionCustom
+  - actions.ActionPneu
+
+templates:
+  utter_bonjour:
+    - text: "Bonjour ! Bienvenue sur carbot. Posez moi votre question ?"
+
+  utter_commande_vehicule:
+    - text: "S'agit-il d'un VF ou d'un VS ?"
+      buttons:
+      - title: "VF"
+        payload: "VF"
+      - title: "VS"
+        payload: "VS"
+
+  utter_vf:
+    - text: "info vf"
+
+  utter_vs:
+    - text: "info vs"
+  
+  utter_default:
+    - text: "cela marche"
+
+  utter_pneu_1:
+    - text: "pneu 1"
+
+  utter_pneu_2:
+    - text: "pneu 2"
+slots:
+    is_RH:
+        type: bool
+
+
+
+
