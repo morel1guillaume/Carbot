@@ -7,6 +7,7 @@ from engine import *
 import random
 from rasa_core.actions import Action
 from rasa_core.events import SlotSet
+import json
 
 
 app = Flask(__name__)
@@ -30,7 +31,7 @@ def chat():
         response = response.json()
         #entities = response.get("entities")
         #topresponse = response["topScoringIntent"]
-        intent = response.get("next_action")
+        next_action = response.get("next_action")
         tracker = response.get("tracker")
         slots = tracker.get("slots")
         sender_id = tracker.get("sender_id")
@@ -38,17 +39,17 @@ def chat():
         print(is_RH)
         print(sender_id)
         print('hello')
-        print(intent)
+        print(next_action)
         #print("Intent {}, Entities {}".format(intent,entities))
-        if intent == "action_pneu":
-            print("hello je suis là")
-            # payload = {"executed_action": "utter_RH", "events": [{"event": "slot", "name": "is_RH", "value": 1}]}
-            # responsetoast = requests.post("http://localhost:5005/conversations/default/continue", json=payload)
+        with open('template.json') as f:
+            data_json = json.load(f)
+        print(data_json)
 
-
+        if next_action in data_json:
             url = "http://localhost:5005/conversations/default/continue"
-
-            payload = "{\n\t\"executed_action\": \"utter_bonjour\",\n\t\"events\": [\n\t\t{\n\t\t\t\"event\": \"slot\", \"name\": \"is_RH\", \"value\": 1\n\t\t\t\n\t\t}\n\t\t]\n}"
+            payload = "{\n\t\"executed_action\": " + next_action + ",\n\t\"events\": []\n}"
+            print(payload)
+            # payload = "{\n\t\"executed_action\": " + next_action + ",\n\t\"events\": [\n\t\t{\n\t\t\t\"event\": \"slot\", \"name\": \"is_RH\", \"value\": 1\n\t\t\t\n\t\t}\n\t\t]\n}"
             headers = {
                 'Content-Type': "application/json",
                 'Cache-Control': "no-cache",
@@ -57,9 +58,10 @@ def chat():
 
             response = requests.request("POST", url, data=payload, headers=headers)
             print(response.text)
-            response_text = "IS RH"# "Sorry will get answer soon" #get_event(entities["day"],entities["time"],entities["place"])
+            print(data_json[next_action]['text'])
+            response_text = data_json[next_action]['text']
         else:
-            response_text = get_random_response(intent)
+            response_text = get_random_response(next_action)
         return jsonify({"status":"success","response":response_text})
     except Exception as e:
         print(e)
