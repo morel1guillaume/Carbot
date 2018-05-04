@@ -1,7 +1,7 @@
 
 ##dict of response for each type of intent
 intent_response_dict = {
-    "utter_bonjour":["Bonjour et bienvenue, Vous avez besoin d'un conseil ou d'un complément d'informaion sur votre véhicule, n je me tiens à votre entière disposition pour vous apporter mon aide. /n Quelle est votre question"],
+    "utter_bonjour":["Bonjour et bienvenue, Vous avez besoin d'un conseil ou d'un complément d'informaion sur votre véhicule, je me tiens à votre entière disposition pour vous apporter mon aide. Quelle est votre question"],
     "utter_vs":["A quel métier appartenez-vous ? (VS)"],
     "utter_vf":["A quel métier appartenez-vous ? (VF)"],
     "action_custom": ["Non Aphabet se charge de cette demande."],

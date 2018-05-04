@@ -18,6 +18,7 @@ class ActionPneu(Action):
 
     def name(self):
         return "action_pneu"
+        
 
     def run(self, dispatcher, tracker, domain):
         a = tracker.get_slot('is_RH')
@@ -34,3 +35,4 @@ class ActionPneu(Action):
 
 if __name__ == '__main__':
     print("hello")
+    

@@ -70,12 +70,36 @@
         "text": "Accord RH"
       },
       {
+        "intent": "RH",
+        "text": "ai-je besoin d'un accord RH ?"
+      },
+      {
+        "intent": "RH",
+        "text": "dois-je demander un accord RH ?"
+      },
+      {
+        "intent": "RH",
+        "text": "besoin d'un accord RH ?"
+      },
+      {
+        "intent": "RH",
+        "text": "RH ?"
+      },
+      {
+        "intent": "RH",
+        "text": "je dois avoir un accord RH ?"
+      },
+      {
         "intent": "pneu",
         "text": "pneu"
       },
       {
         "intent": "pneu",
         "text": "changer pneu"
+      },
+      {
+        "intent": "pneu",
+        "text": "pneu à changer"
       }
     ],
     "regex_features": [],
